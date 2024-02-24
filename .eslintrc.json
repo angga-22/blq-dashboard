@@ -3,6 +3,8 @@
   "rules": {
     "semi": ["error", "always"],
     "quotes": ["error", "double"],
-    "no-unused-vars": [2, { "argsIgnorePattern": "^_" }]
+    "no-unused-vars": [2, { "argsIgnorePattern": "^_" }],
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off"
   }
 }

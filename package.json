@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --no-cache",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.json",
     "prepare": "husky"
   },
@@ -24,10 +24,10 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^9.1.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "postcss": "^8",
-    "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   },
