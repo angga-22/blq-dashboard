@@ -1,56 +1,58 @@
 import { useState, useEffect } from "react";
 import { STATUS_CODE_VARIANT, ISTATUS_CODE } from "@/app/_constants";
 export interface ICollection {
-  id: number;
-  type: string;
-  code: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  trialPeriod: number | null;
-  installmentPrice: number | null;
-  installmentPeriod: number | null;
-  rating: number;
-  startDate: Date | null;
-  endDate: Date | null;
-  viewType: string | null;
-  createdAt: Date;
-  items: never[];
-  media: {
-    createdAt: Date;
-    updatedAt: Date;
-    deletedAt: Date | null;
-    uuid: string;
-    mimeType: string;
-    uri: string;
-    fileName: string;
-    objectKey: string;
-    deviceType: string | null;
-    collectionId: number;
-    seq: number;
-    itemKey: string | null;
+  items: {
+    id: number;
     type: string;
-  }[];
-  thumbnail: {
+    code: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    trialPeriod: number | null;
+    installmentPrice: number | null;
+    installmentPeriod: number | null;
+    rating: number;
+    startDate: Date | null;
+    endDate: Date | null;
+    viewType: string | null;
     createdAt: Date;
-    updatedAt: Date;
-    deletedAt: Date | null;
-    uuid: string;
-    mimeType: string;
-    uri: string;
-    fileName: string;
-    objectKey: string;
-    deviceType: string | null;
-    collectionId: number;
-    seq: number;
-    itemKey: string | null;
-    type: string;
-  };
-  taggings: never[];
-  singleCollections: never[];
+    items: never[];
+    media: {
+      createdAt: Date;
+      updatedAt: Date;
+      deletedAt: Date | null;
+      uuid: string;
+      mimeType: string;
+      uri: string;
+      fileName: string;
+      objectKey: string;
+      deviceType: string | null;
+      collectionId: number;
+      seq: number;
+      itemKey: string | null;
+      type: string;
+    }[];
+    thumbnail: {
+      createdAt: Date;
+      updatedAt: Date;
+      deletedAt: Date | null;
+      uuid: string;
+      mimeType: string;
+      uri: string;
+      fileName: string;
+      objectKey: string;
+      deviceType: string | null;
+      collectionId: number;
+      seq: number;
+      itemKey: string | null;
+      type: string;
+    };
+    taggings: never[];
+    singleCollections: never[];
+  }
 }
 export const useSwiperCollection = () => {
-  const [data, setData] = useState<ICollection[]>([]);
+  const [data, setData] = useState<any>([]);
   const getData = async () => {
     try {
       const res = await fetch(`${process.env.BASE_API_URL}/collections`, {

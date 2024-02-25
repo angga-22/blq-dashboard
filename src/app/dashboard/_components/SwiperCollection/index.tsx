@@ -42,7 +42,7 @@ const SwiperCollection = (_props: Props) => {
         modules={[FreeMode, Pagination, Navigation]}
         className="w-[70%]"
       >
-        {collectionData?.items?.slice(0, 5).map((item) => {
+        {collectionData?.items?.slice(0, 5).map((item: any) => {
           return (
             <SwiperSlide key={item.id}>
               <Card props={item} />
