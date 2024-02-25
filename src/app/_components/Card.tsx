@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { ClassNameProp } from "@/app/_types";
 import { ImageComp } from "./Image";
 
 interface ICardProps {
@@ -10,7 +9,7 @@ interface ICardProps {
   };
   installmentPrice: string;
   discount: string;
-  className?: ClassNameProp;
+  className?: string;
 }
 
 const Card: FC<ICardProps> = ({ props }) => {
