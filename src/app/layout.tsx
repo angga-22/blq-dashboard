@@ -17,8 +17,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { BASE_API_ASSETS } = process.env;
+
   return (
     <html lang="en">
+      <link
+        rel="shortcut icon"
+        href={`${BASE_API_ASSETS}/testvalley-favicon-new.ico`}
+        type="image/x-icon"
+      />
       <body className={inter.className}>{children}</body>
     </html>
   );
