@@ -2,14 +2,7 @@ import { FC } from "react";
 import { ImageComp } from "./Image";
 
 interface ICardProps {
-  title: string;
-  description: string;
-  thumbnail: {
-    uri: string;
-  };
-  installmentPrice: string;
-  discount: string;
-  className?: string;
+  props: { title: any; description: any; thumbnail: any; installmentPrice: any; discount: any; className: any; };
 }
 
 const Card: FC<ICardProps> = ({ props }) => {
